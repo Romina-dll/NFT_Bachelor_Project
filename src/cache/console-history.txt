@@ -1,3 +1,33 @@
+marketplace
+const marketplace = await ehters.getContractAt("Marketplace" , "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512")
+name
+const name = contract.name()
+contract
+const contract = await ethers.getContractAt("NFT" , "0x5FbDB2315678afecb367f032d93F642f64180aa3")
+feeAccount
+const feeAccount = await marketplace.feeAccount()
+feePrecent
+const feePrecent = await marketplace.feePercent()
+marketplace
+const marketplace = await ethers.getContractAt("Marketplace" , "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512")
+.exit
+contract
+const contract = await ethers.getContractAt("NFT" , "0x5FbDB2315678afecb367f032d93F642f64180aa3" )
+.exit
+symbol
+const symbol = await contract.symbol()
+namee
+const namee = await contract.name()
+const name = await contract.name()
+const namen = await contract.name()
+const namen = await contract.getName()
+const name = await contract.getApproved()
+tokenCountt
+const tokenCountt = await contract.tokenCount()
+const tokenCount = await contract.tokenCount()
+const tokenCount = await contract.tokenCount
+contract
+const contract = await ethers.getContractAt("NFT" , "0x5FbDB2315678afecb367f032d93F642f64180aa3")
 .exit
 symbol
 const symbol = await contract.symbol()
