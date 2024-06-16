@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:userinterface_nft_bachelar_finalproject/core/values/app.dart';
 import 'package:userinterface_nft_bachelar_finalproject/core/values/colors.dart';
+import 'package:userinterface_nft_bachelar_finalproject/modules/home/view.dart';
 
 class IntroScreen extends StatelessWidget{
   IntroScreen({super.key});
@@ -47,7 +48,7 @@ class IntroScreen extends StatelessWidget{
               Spacer(flex: 2,),
               InkWell(
                 onTap: (){
-
+                  Get.toNamed(HomeScreen.name);
                 },
                 child: Container(
                   width: double.infinity,
