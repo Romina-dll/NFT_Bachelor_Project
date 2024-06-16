@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:web3_icons/web3_icons.dart';
 import 'package:userinterface_nft_bachelar_finalproject/core/models/NFT.dart';
 import 'package:userinterface_nft_bachelar_finalproject/core/values/app.dart';
 import 'package:userinterface_nft_bachelar_finalproject/core/values/colors.dart';
