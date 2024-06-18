@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:userinterface_nft_bachelar_finalproject/core/helper/app_size.dart';
+import 'package:userinterface_nft_bachelar_finalproject/core/main_bindings.dart';
 import 'package:userinterface_nft_bachelar_finalproject/core/routes.dart';
 import 'package:userinterface_nft_bachelar_finalproject/core/values/app.dart';
 import 'package:userinterface_nft_bachelar_finalproject/modules/Intro/view.dart';
 
-void main() {
+void main() async {
+
+  await AppMainBindings.setup();
+
   runApp(const MyApp());
 }
 

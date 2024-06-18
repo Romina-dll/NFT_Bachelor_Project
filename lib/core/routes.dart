@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 import 'package:userinterface_nft_bachelar_finalproject/modules/Intro/view.dart';
 import 'package:userinterface_nft_bachelar_finalproject/modules/home/view.dart';
+import 'package:userinterface_nft_bachelar_finalproject/modules/landing/bindings.dart';
+import 'package:userinterface_nft_bachelar_finalproject/modules/landing/view.dart';
 
 class RoutePages {
  static final pages = [
@@ -12,5 +14,10 @@ class RoutePages {
        name: HomeScreen.name,
        page: () => HomeScreen()
    ),
+   GetPage(
+     name: LandingScreen.name,
+     page: () => LandingScreen(),
+     binding: LandingBinding(),
+   )
  ];
 }

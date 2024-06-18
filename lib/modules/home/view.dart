@@ -91,7 +91,7 @@ class _HomeScreen extends State<HomeScreen>{
                       )
                     ],
                   ),
-                  SizedBox(height: appSize.getHeight(heightSize: 30),),
+                  SizedBox(height: appSize.getHeight(heightSize: 20),),
                   Row(children: [
                     Text("Gallery" , style: TextStyle(fontSize: 30 , fontWeight: FontWeight.bold),),
                     Spacer(),
@@ -150,7 +150,7 @@ class NFTCard extends StatelessWidget{
                   topLeft: Radius.circular(10)
               ),
               child: Image.asset(nft.image,
-                height: appSize.getHeight(heightSize: 450),
+                height: appSize.getHeight(heightSize: 410),
                 width: double.infinity,
                 fit: BoxFit.fitWidth,),
             ),
