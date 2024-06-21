@@ -19,8 +19,10 @@ class DotNavigationBarItem {
 class DotNavigationBar extends StatelessWidget{
   final List<DotNavigationBarItem> items;
   final int currentIndex;
+  final Function(int) onTap;
   DotNavigationBar({
     super.key,
+    required this.onTap,
     required this.currentIndex,
     required this.items
   });
@@ -48,7 +50,7 @@ class DotNavigationBar extends StatelessWidget{
                       return Material(
                         color: Colors.transparent,
                         child: InkWell(
-                          onTap: () {},
+                          onTap:() => onTap(items.indexOf(item)) ,
                           child: Stack(children: <Widget>[
                             Padding(padding: EdgeInsets.only(right: 10),
                               child:Row(

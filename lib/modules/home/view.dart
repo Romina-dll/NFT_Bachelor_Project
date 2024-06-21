@@ -102,11 +102,13 @@ class _HomeScreen extends State<HomeScreen>{
                   Container(
                     height: appSize.getHeight(heightSize: 600),
                       child: ListView.separated(
-                          itemBuilder:(context , index) => NFTCard(nft: nft[index],),
-                          separatorBuilder:(context, index) => SizedBox(height: appSize.getHeight(heightSize: 20),),
+                          itemBuilder:(context , index) =>
+                              NFTCard(nft: nft[index], bottomMargin: index == nft.length-1 ? 20 : 0,),
+                          separatorBuilder:(context, index) => SizedBox(
+                            height: appSize.getHeight(heightSize: 20),
+                          ),
                           itemCount: nft.length
-                      ))
-
+                      )),
                 ],
               ),
             ),
@@ -118,18 +120,20 @@ class _HomeScreen extends State<HomeScreen>{
 }
 
 List<NFTModel> nft = [
-  NFTModel(name: 'Girl', description: "girl", image: 'assets/nft_girl.jpg', price: '10.2'),
-  NFTModel(name: 'Motor', description: 'motor', image: 'assets/nft_motor.jpg',price: '5.4'),
-  NFTModel(name: 'Man', description: 'man', image: 'assets/nft_pic.jpg', price: '3')
+  NFTModel(name: 'Girl', description: "girl", image: 'assets/nft_girl.jpg', price: 10.2 , isSold: false),
+  NFTModel(name: 'Motor', description: 'motor', image: 'assets/nft_motor.jpg',price: 5.4 , isSold:  true),
+  NFTModel(name: 'Man', description: 'man', image: 'assets/nft_man.jpg', price: 3 , isSold: false)
 ];
 
 class NFTCard extends StatelessWidget{
   NFTCard({
     Key? key,
-    required this.nft
+    required this.nft,
+    required this.bottomMargin
   }):super(key: key);
 
   final NFTModel nft;
+  final double bottomMargin;
 
   @override
   Widget build(BuildContext context) {
@@ -142,6 +146,7 @@ class NFTCard extends StatelessWidget{
         //     side: new BorderSide(color: AppColors.primaryColor, width: 3.0),
         //   borderRadius: BorderRadius.all(Radius.circular(10))
         // ),
+        margin: EdgeInsets.only(bottom: bottomMargin),
         child: Column(
           children: [
             ClipRRect(
@@ -157,16 +162,19 @@ class NFTCard extends StatelessWidget{
             ListTile(
                 title: Text(nft.name ,
                   style: TextStyle(
+                      decoration: nft.isSold ? TextDecoration.lineThrough : null,
+                      decorationColor: AppColors.t,
+                      decorationThickness: 2,
                       fontWeight: FontWeight.w900,
                       color: AppColors.t,
                       fontSize: 20),
                 ),
-                subtitle: Row(
+                subtitle:!nft.isSold ? Row(
                   children: [
                     Image.asset('assets/ETH_icon.png' , scale: 1.6,),
-                    Text(' ' + nft.price,style: TextStyle(fontSize:17 , color: AppColors.t))
-                  ],
-                ),
+                    Text(' ' + nft.price.toString(),style: TextStyle(fontSize:17 , color: AppColors.t))
+                  ] ,
+                ) : Text( 'Sold',style: TextStyle(fontSize:17 , color: AppColors.t)),
                 trailing: Container(
 
                   child: IconButton(

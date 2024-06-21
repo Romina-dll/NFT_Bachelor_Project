@@ -21,6 +21,7 @@ class LandingScreen extends StatelessWidget{
             padding: EdgeInsets.symmetric(
                 horizontal: appSize.getWidth(widthSize: 0)),
             child:  DotNavigationBar(
+              onTap: LandingController.to.handleIndexChanged,
                 currentIndex: SelectedTab.values.indexOf(LandingController.to.selectedTab.value),
                 // currentIndex: 0,
                 items: [
