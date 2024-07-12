@@ -1,0 +1,19 @@
+{
+  "name": "userinterface_nft_bachelar_finalproject",
+  "version": "1.0.0",
+  "description": "A new Flutter project.",
+  "main": "truffle-config.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.5.0",
+    "ipfs-http-client": "^60.0.1"
+  }
+}
